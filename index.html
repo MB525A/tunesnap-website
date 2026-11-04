@@ -7,10 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { 
-            background-color: #f8fafc; /* Light slate matching your app background */
+            background-color: #f8fafc; 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
         }
-        /* Custom gradient matching the TuneSnap logo */
+
         .brand-gradient {
             background: linear-gradient(135deg, #c084fc 0%, #a855f7 40%, #6366f1 100%);
         }
@@ -38,7 +38,7 @@
         </p>
         
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <a href="#playstore-link" class="brand-gradient hover:opacity-90 text-white font-bold py-4 px-10 rounded-full transition-all shadow-lg shadow-indigo-500/30 text-lg flex items-center justify-center gap-2">
+            <a href="https://play.google.com/store/apps/details?id=com.tunesnap" class="brand-gradient hover:opacity-90 text-white font-bold py-4 px-10 rounded-full transition-all shadow-lg shadow-indigo-500/30 text-lg flex items-center justify-center gap-2">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M3 20.5v-17c0-.83.67-1.5 1.5-1.5.38 0 .74.15 1.01.41l10.87 10.87c.39.39.39 1.02 0 1.41L5.51 21.09c-.27.26-.63.41-1.01.41-.83 0-1.5-.67-1.5-1.5z"/></svg>
                 Get it on Google Play
             </a>
@@ -49,7 +49,6 @@
             <h2 class="text-3xl font-bold mb-3 text-slate-900">iPhone User?</h2>
             <p class="text-slate-500 mb-8">We are building the iOS and Apple CarPlay version next. Join the waitlist to get notified the minute it drops.</p>
             
-            <!-- Replace YOUR_FORMSPREE_ENDPOINT with your actual Formspree URL -->
             <form action="https://formspree.io/f/xvkklkqb" method="POST" class="flex flex-col sm:flex-row gap-3">
                 <input type="email" name="email" placeholder="Enter your email address" required 
                        class="flex-1 px-5 py-4 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition">
