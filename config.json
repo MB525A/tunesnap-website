@@ -1,0 +1,5 @@
+{
+  "baseVersion": 1,
+  "baseUrl": "https://gettunesnap.com/stations_base_v1.json",
+  "patchUrl": "https://gettunesnap.com/stations_patch.json"
+}
