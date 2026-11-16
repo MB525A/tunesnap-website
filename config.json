@@ -1,5 +1,6 @@
 {
   "baseVersion": 1,
-  "baseUrl": "https://gettunesnap.com/stations_base_v1.json",
-  "patchUrl": "https://gettunesnap.com/stations_patch.json"
+  "patchVersion": 1,
+  "patchUrl": "https://gettunesnap.com/stations_patch.json",
+  "patchSha256": "913235d64daaaa976885dd41e93fe17656dfe7331e5bc5fe66be28a83b775c72"
 }
