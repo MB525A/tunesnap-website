@@ -13,19 +13,20 @@
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p><strong>Effective Date:</strong> November 14, 2026</p>
+    <p><strong>Effective Date:</strong> November 19, 2026</p>
     
     <p>MB 525A built the TuneSnap app as a commercial, subscription-based application ("Service"). This page informs visitors and users regarding our policies with the collection, use, and disclosure of information when using our Service.</p>
 
     <h2>Subscriptions and Billing</h2>
-    <p>TuneSnap offers an auto-renewing annual subscription, which may include a 7-day free trial for eligible new subscribers. All payments, free trials, renewals, and cancellations are processed securely by Google Play Billing. MB 525A does not collect, process, or store your credit card or payment details; we only receive an anonymized purchase token and subscription status from Google Play to unlock premium features.</p>
+    <p>TuneSnap provides a 7-day free trial for new devices and offers an auto-renewing annual subscription (which may include an additional introductory trial offer for eligible Google Play accounts). All payments, renewals, and cancellations are processed securely by Google Play Billing. MB 525A does not collect, process, or store your credit card or payment details; we only receive an anonymized purchase token and subscription status from Google Play to unlock premium features.</p>
     
     <h2>Information Collection and Use</h2>
     <p>TuneSnap does not require you to create an account. Your station selections, listening history, and song wishlist are stored locally on your device.</p>
-    <p>To deliver live radio streams, station metadata, and app stability diagnostics, the app interacts with third-party services that may receive your IP address or device identifiers:</p>
+    <p>To deliver live radio streams, station metadata, trial management, and app stability diagnostics, the app interacts with third-party services that may receive your IP address or device identifiers:</p>
     <ul>
         <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services &amp; Google Play Billing</a> – used for subscription verification and app distribution.</li>
-        <li><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener">Firebase Crashlytics &amp; Google Analytics</a> – used to collect anonymous crash reports and diagnostic statistics to improve app stability.</li>
+        <li><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener">Google Cloud Firestore (Trial Eligibility &amp; Feedback)</a> – to enforce one 7-day free trial per device and prevent repeat trial resets on reinstall, TuneSnap generates a one-way cryptographic hash (salted SHA-256) of your device's Android ID locally on your device and stores only that hash and the trial start timestamp in Google Cloud Firestore. The raw Android ID is never transmitted or stored, and the hash is used strictly for app functionality and fraud prevention (never for advertising or cross-app tracking). If you choose to submit in-app feedback, your message and basic diagnostic metadata (app version, OS version, device model, and optional contact email if you include one) are also stored in Firestore.</li>
+        <li><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener">Firebase Crashlytics &amp; Google Analytics</a> – used (when enabled in Settings &rarr; Privacy) to collect anonymous crash reports and diagnostic statistics to improve app stability.</li>
         <li><strong>Radio Streams &amp; Station Metadata Services</strong> – when streaming audio, fetching "now playing" track titles, loading station icons (including via Google's favicon service), or resolving backup stream URLs (via radio-browser.info), your device connects directly to the respective servers, which receive your IP address as part of standard internet requests.</li>
     </ul>
 
@@ -33,7 +34,7 @@
     <p>Whenever you use our Service, in the event of an app error, diagnostic information ("Log Data") may be collected through third-party crash reporting tools. This Log Data may include your device Internet Protocol ("IP") address, device model, operating system version, app configuration at the time of the error, and timestamps.</p>
 
     <h2>Data Retention and Deletion</h2>
-    <p>Your saved stations, song history, and wishlist remain locally on your device until you clear the app's storage or uninstall TuneSnap. Diagnostic and crash logs retained by Firebase are automatically deleted in accordance with Google's standard retention schedules. Under GDPR and applicable privacy laws, you may request access to or deletion of any personal data by contacting us.</p>
+    <p>Your saved stations, song history, and wishlist remain locally on your device until you clear the app's storage or uninstall TuneSnap. The hashed device identifier and trial start timestamp are retained in Google Cloud Firestore to preserve trial eligibility across app reinstalls on the same device. Diagnostic and crash logs retained by Firebase are automatically deleted in accordance with Google's standard retention schedules. Under GDPR and applicable privacy laws, you may request access to or deletion of any data associated with your device or feedback by contacting us.</p>
 
     <h2>Children's Privacy</h2>
     <p>TuneSnap is intended for a general audience and does not knowingly collect personally identifiable information from children under the age of 13 (or 16 in the European Economic Area).</p>
