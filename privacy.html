@@ -5,47 +5,331 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - TuneSnap</title>
     <style>
-        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 2rem; color: #333; }
-        h1, h2 { color: #111; margin-top: 1.5rem; }
-        a { color: #4F46E5; text-decoration: none; }
+        :root {
+            color-scheme: light dark;
+            --bg: #ffffff;
+            --surface: #f7f8fa;
+            --text: #1c1f24;
+            --muted: #586069;
+            --border: #e1e4e8;
+            --accent: #0969da;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0d1117;
+                --surface: #161b22;
+                --text: #e6edf3;
+                --muted: #8b949e;
+                --border: #30363d;
+                --accent: #58a6ff;
+            }
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 32px 16px 64px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.65;
+            background: var(--bg);
+            color: var(--text);
+        }
+        main {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+        h1 {
+            margin: 0 0 6px;
+            font-size: 2rem;
+            line-height: 1.25;
+        }
+        .meta {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+        h2 {
+            margin-top: 32px;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 6px;
+        }
+        p { margin: 0 0 14px; }
+        ul {
+            margin: 0 0 16px;
+            padding-left: 22px;
+        }
+        li { margin-bottom: 8px; }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
         a:hover { text-decoration: underline; }
+        .callout {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin: 16px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0 20px;
+            font-size: 0.95rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            vertical-align: top;
+        }
+        th {
+            background: var(--surface);
+            font-weight: 600;
+        }
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
+<main>
     <h1>Privacy Policy</h1>
-    <p><strong>Effective Date:</strong> November 19, 2026</p>
-    
-    <p>MB 525A built the TuneSnap app as a commercial, subscription-based application ("Service"). This page informs visitors and users regarding our policies with the collection, use, and disclosure of information when using our Service.</p>
+    <p class="meta">Effective Date: November 23, 2026 &middot; Data Controller: MB 525A (Lithuania, EU)</p>
 
-    <h2>Subscriptions and Billing</h2>
-    <p>TuneSnap provides a 7-day free trial for new devices and offers an auto-renewing annual subscription (which may include an additional introductory trial offer for eligible Google Play accounts). All payments, renewals, and cancellations are processed securely by Google Play Billing. MB 525A does not collect, process, or store your credit card or payment details; we only receive an anonymized purchase token and subscription status from Google Play to unlock premium features.</p>
-    
-    <h2>Information Collection and Use</h2>
-    <p>TuneSnap does not require you to create an account. Your station selections, listening history, and song wishlist are stored locally on your device.</p>
-    <p>To deliver live radio streams, station metadata, trial management, and app stability diagnostics, the app interacts with third-party services that may receive your IP address or device identifiers:</p>
+    <p>
+        MB 525A built the <strong>TuneSnap</strong> Android application (including its Android Auto
+        experience) as a commercial, subscription-based application ("Service"). This Privacy Policy
+        explains what information is processed when you use TuneSnap, why it is processed, which
+        third-party services are involved, and what rights you have under the EU General Data
+        Protection Regulation (GDPR) and other applicable privacy laws.
+    </p>
+
+    <div class="callout">
+        <strong>Privacy at a glance:</strong> TuneSnap requires no account, contains no third-party
+        advertising, does not access or use the Android Advertising ID, keeps your stations, listening
+        history, and saved songs locally on your device, and keeps anonymous crash reporting and
+        usage analytics <strong>off by default</strong> unless you explicitly opt in.
+    </div>
+
+    <h2>1. Local Data Stored on Your Device</h2>
+    <p>
+        TuneSnap does not require you to register or sign in. Your selected countries, saved radio
+        stations, listening history (automatically pruned locally after 30 days or 2,000 entries),
+        saved songs (wishlist), theme preference, and chosen external music app are stored locally on
+        your device. Subscription cache and internal diagnostic counters are excluded from Android
+        cloud backup and device-to-device transfer.
+    </p>
+
+    <h2>2. Subscriptions, Trial Eligibility &amp; Billing</h2>
+    <p>
+        TuneSnap provides a 7-day free trial for new devices and offers an auto-renewing annual
+        subscription (which may include an introductory trial offer for eligible Google Play accounts).
+    </p>
     <ul>
-        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services &amp; Google Play Billing</a> – used for subscription verification and app distribution.</li>
-        <li><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener">Google Cloud Firestore (Trial Eligibility &amp; Feedback)</a> – to enforce one 7-day free trial per device and prevent repeat trial resets on reinstall, TuneSnap generates a one-way cryptographic hash (salted SHA-256) of your device's Android ID locally on your device and stores only that hash and the trial start timestamp in Google Cloud Firestore. The raw Android ID is never transmitted or stored, and the hash is used strictly for app functionality and fraud prevention (never for advertising or cross-app tracking). If you choose to submit in-app feedback, your message and basic diagnostic metadata (app version, OS version, device model, and optional contact email if you include one) are also stored in Firestore.</li>
-        <li><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener">Firebase Crashlytics &amp; Google Analytics</a> – used (when enabled in Settings &rarr; Privacy) to collect anonymous crash reports and diagnostic statistics to improve app stability.</li>
-        <li><strong>Radio Streams &amp; Station Metadata Services</strong> – when streaming audio, fetching "now playing" track titles, loading station icons (including via Google's favicon service), or resolving backup stream URLs (via radio-browser.info), your device connects directly to the respective servers, which receive your IP address as part of standard internet requests.</li>
+        <li>
+            <strong>Google Play Billing:</strong> All payments, renewals, and cancellations are
+            processed securely by Google Play. MB 525A never sees, collects, or stores your payment
+            card or billing details; the app only receives a purchase token, purchase timestamp, and
+            subscription status from Google Play to unlock access.
+        </li>
+        <li>
+            <strong>Trial Fraud Prevention (Google Cloud Firestore):</strong> To enforce one 7-day
+            free trial per device across reinstalls, TuneSnap computes a one-way cryptographic hash
+            (salted SHA-256) of your device's Android ID locally on your device and stores only that
+            hash and the trial start timestamp in Google Cloud Firestore. The raw Android ID is never
+            transmitted or stored, and the hash is never used for advertising or cross-app tracking.
+        </li>
     </ul>
 
-    <h2>Log Data</h2>
-    <p>Whenever you use our Service, in the event of an app error, diagnostic information ("Log Data") may be collected through third-party crash reporting tools. This Log Data may include your device Internet Protocol ("IP") address, device model, operating system version, app configuration at the time of the error, and timestamps.</p>
+    <h2>3. Optional Crash Reporting &amp; Usage Analytics (Opt-In)</h2>
+    <p>
+        TuneSnap integrates <strong>Firebase Crashlytics</strong> and <strong>Google Analytics for
+        Firebase</strong> to help fix crashes and understand which features are used. Collection is
+        <strong>disabled by default</strong> and only starts if you enable
+        <em>"Share anonymous crash reports and usage stats"</em> in the app's <strong>Settings</strong>
+        screen.
+    </p>
+    <ul>
+        <li>
+            <strong>When enabled:</strong> Crashlytics may collect crash stack traces, device model,
+            Android version, app version, and timestamps at the time of an error. Firebase Analytics
+            collects anonymous usage events (such as station plays, stream starts/errors, listening
+            duration, opening a song in a music app, saving/removing stations or songs, country
+            selection, Roulette spins, trial checkout starts, feedback submission, Android Auto
+            connection, and screen views) along with non-identifying app properties (selected country
+            or mode, preferred music app, subscription status, and whether Android Auto is used).
+        </li>
+        <li>
+            <strong>No Ads or Ad Tracking:</strong> TuneSnap contains no ads, removes the
+            <code>AD_ID</code> permission, and permanently disables Google Analytics advertising
+            storage, ad personalization, and ad user-data signals.
+        </li>
+        <li>
+            <strong>Revoking Consent:</strong> You can turn the toggle off at any time in
+            <strong>Settings</strong>. Disabling it immediately stops collection, deletes any unsent
+            crash reports on the device, and resets local Firebase Analytics data.
+        </li>
+    </ul>
 
-    <h2>Data Retention and Deletion</h2>
-    <p>Your saved stations, song history, and wishlist remain locally on your device until you clear the app's storage or uninstall TuneSnap. The hashed device identifier and trial start timestamp are retained in Google Cloud Firestore to preserve trial eligibility across app reinstalls on the same device. Diagnostic and crash logs retained by Firebase are automatically deleted in accordance with Google's standard retention schedules. Under GDPR and applicable privacy laws, you may request access to or deletion of any data associated with your device or feedback by contacting us.</p>
+    <h2>4. In-App Feedback</h2>
+    <p>
+        If you choose to submit feedback via <strong>Settings &rarr; Send feedback</strong>, your
+        message is stored in Google Cloud Firestore together with basic technical context so we can
+        reproduce and fix issues: app version and build type, Android version/SDK level, device
+        manufacturer and model, your currently selected radio country/mode, and device language/locale.
+        Feedback is anonymous unless you voluntarily write your email address inside the message to
+        request a reply. Feedback messages are never sent to Crashlytics.
+    </p>
 
-    <h2>Children's Privacy</h2>
-    <p>TuneSnap is intended for a general audience and does not knowingly collect personally identifiable information from children under the age of 13 (or 16 in the European Economic Area).</p>
+    <h2>5. Third-Party Services &amp; Network Requests</h2>
+    <p>
+        To play live radio, display track titles and artwork, update the station catalog, and handle
+        subscriptions, TuneSnap makes standard internet requests to the following services (which
+        necessarily receive your IP address as part of normal internet routing):
+    </p>
+    <ul>
+        <li>
+            <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Play Services &amp; Google Play Billing</a>
+            &ndash; app distribution and subscription verification.
+        </li>
+        <li>
+            <a href="https://firebase.google.com/support/privacy/" rel="noopener noreferrer">Google Cloud Firestore</a>
+            &ndash; trial eligibility hash/timestamp and user-submitted feedback.
+        </li>
+        <li>
+            <a href="https://firebase.google.com/support/privacy/" rel="noopener noreferrer">Firebase Crashlytics &amp; Google Analytics for Firebase</a>
+            &ndash; anonymous crash reports and usage statistics (<strong>only when you opt in</strong> in Settings).
+        </li>
+        <li>
+            <strong>TuneSnap Station Catalog (<code>gettunesnap.com</code>)</strong> &ndash; fetches
+            cryptographically signed station directory updates over HTTPS.
+        </li>
+        <li>
+            <strong>Radio Broadcasters &amp; Station Metadata Services</strong> &ndash; streaming
+            audio, reading ICY/HLS or station "now playing" track metadata, loading station logos
+            (including via <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google's favicon service</a>
+            over HTTPS), and resolving backup stream URLs via
+            <a href="https://www.radio-browser.info/" rel="noopener noreferrer">radio-browser.info</a>
+            when a primary stream fails.
+        </li>
+        <li>
+            <strong>Country Flag Images (<code>flagcdn.com</code>)</strong> &ndash; loads country flag
+            icons displayed in the Explore list and Roulette wheel over HTTPS.
+        </li>
+        <li>
+            <strong>External Music Apps &amp; Web Search</strong> &ndash; when you tap a track to open
+            it in your selected service (YouTube Music, Spotify, YouTube, Apple Music, Deezer, or
+            Google Search), TuneSnap sends the song title and artist to that app or website. Your
+            interaction inside that external service is governed by its own privacy policy.
+        </li>
+    </ul>
 
-    <h2>Security</h2>
-    <p>We value your trust in providing us your information and strive to use commercially acceptable means (such as encrypted HTTPS connections where supported) to protect it. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+    <h2>6. Legal Basis for Processing (GDPR)</h2>
+    <p>If you are located in the European Economic Area (EEA), UK, or Switzerland, MB 525A processes data under the following legal bases (GDPR Article 6):</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Processing Activity</th>
+                <th>Legal Basis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Subscription verification via Google Play Billing &amp; delivering live radio streams</td>
+                <td>Performance of a contract (Art. 6(1)(b))</td>
+            </tr>
+            <tr>
+                <td>Salted SHA-256 device hash for 7-day free trial abuse prevention</td>
+                <td>Legitimate interest in preventing trial fraud (Art. 6(1)(f))</td>
+            </tr>
+            <tr>
+                <td>Anonymous crash reporting (Crashlytics) &amp; usage analytics (Firebase Analytics)</td>
+                <td>Your explicit opt-in consent (Art. 6(1)(a)), withdrawable anytime in Settings</td>
+            </tr>
+            <tr>
+                <td>In-app feedback messages and any email address you choose to include</td>
+                <td>Your consent by choosing to submit feedback (Art. 6(1)(a)) / Legitimate interest in responding to your request (Art. 6(1)(f))</td>
+            </tr>
+        </tbody>
+    </table>
 
-    <h2>Changes to This Privacy Policy</h2>
-    <p>We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes. Changes are effective immediately after they are posted on this page.</p>
+    <h2>7. International Data Transfers</h2>
+    <p>
+        Google / Firebase services may process data on servers outside the EEA (including in the
+        United States). Such transfers rely on Google's participation in the EU&ndash;U.S. Data
+        Privacy Framework and/or European Commission Standard Contractual Clauses (SCCs).
+    </p>
 
-    <h2>Contact Us</h2>
-    <p>If you have any questions, privacy requests, or suggestions about our Privacy Policy, please contact MB 525A at <strong>info@525a.lt</strong>.</p>
+    <h2>8. Data Retention &amp; Deletion</h2>
+    <ul>
+        <li>
+            <strong>Local device data:</strong> Saved stations, song history, and wishlist remain on
+            your device until you clear history/app data or uninstall TuneSnap.
+        </li>
+        <li>
+            <strong>Trial eligibility record:</strong> The salted SHA-256 hash and trial start
+            timestamp are retained in Firestore to preserve trial eligibility across reinstalls and
+            can be deleted upon verified request.
+        </li>
+        <li>
+            <strong>Feedback:</strong> Retained only as long as needed to investigate and resolve the
+            reported issue or reply to you, after which it is deleted.
+        </li>
+        <li>
+            <strong>Crash &amp; analytics data (if opted in):</strong> Automatically expired according
+            to Firebase's standard retention schedules (90 days for Crashlytics; up to 14 months for
+            Firebase Analytics event data).
+        </li>
+    </ul>
+
+    <h2>9. Your Privacy Rights</h2>
+    <p>
+        Under GDPR and applicable privacy laws, you have the right to request access to, correction
+        of, or deletion of personal data associated with your feedback or device, restrict or object
+        to processing based on legitimate interest, and withdraw consent for optional analytics/crash
+        reporting at any time in <strong>Settings</strong>.
+    </p>
+    <p>
+        You also have the right to lodge a complaint with your local data protection supervisory
+        authority, including Lithuania's State Data Protection Inspectorate
+        (<a href="https://vdai.lrv.lt/en/" rel="noopener noreferrer">VDAI</a>).
+    </p>
+
+    <h2>10. Children's Privacy</h2>
+    <p>
+        TuneSnap is intended for a general audience and does not knowingly collect personal
+        information from children under the age of 13 (or 16 in the EEA). If you believe a child has
+        provided personal information (for example, via in-app feedback), please contact us and we
+        will promptly delete it.
+    </p>
+
+    <h2>11. Security</h2>
+    <p>
+        We protect your data using encrypted HTTPS connections for catalog updates, APIs, icons, and
+        Firebase communications, Ed25519 cryptographic signatures for station catalog manifests, and
+        local RSA signature verification for Google Play purchases. Note that some third-party
+        broadcast radio streams still transmit audio over HTTP where broadcasters do not offer HTTPS.
+        No method of transmission or storage is 100% secure, so we cannot guarantee absolute security.
+    </p>
+
+    <h2>12. Changes to This Privacy Policy</h2>
+    <p>
+        We may update this Privacy Policy from time to time to reflect changes in TuneSnap or legal
+        requirements. Updates take effect when posted on this page with a revised Effective Date.
+    </p>
+
+    <h2>13. Contact Us</h2>
+    <p>
+        If you have questions, privacy requests, or data deletion inquiries, please contact the data
+        controller:
+    </p>
+    <p>
+        <strong>MB 525A</strong><br>
+        Email: <a href="mailto:info@525a.lt">info@525a.lt</a>
+    </p>
+</main>
 </body>
 </html>
